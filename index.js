@@ -16,12 +16,24 @@ form.onsubmit = function(e) {
     })
     .then(function(res){
         console.log(res);
-        var city = res.name;
-        var country = res.sys.country;
-        var description = res.weather[0].description;
-        var currentTemperature = res.main.temp;
-        var feelsLike = res.main.feels_like;
-        console.log(city, country, description, currentTemperature, feelsLike)
+
+        var div = document.createElement('div');
+        var h2 = document.createElement('h2');
+        h2.textContent = res.name + " , " + res.sys.country;
+        div.appendChild(h2)
+        weatherLog.appendChild(div)
+
+        var description = document.createElement('p');
+        description.textContent = res.weather[0].description;
+        div.appendChild(description);
+
+        var p = document.createElement('p');
+        p.textContent = 'Current Temperature: ' + res.main.temp + ' degrees Fahrenheit';
+        div.appendChild(p);
+
+        var p2 = document.createElement('p');
+        p2.textContent = 'Feels Like: ' + res.main.feels_like + ' degrees Fahrenheit';
+        div.appendChild(p2);
 
     })
 
