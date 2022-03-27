@@ -16,7 +16,16 @@ form.onsubmit = function(e) {
     })
     .then(function(res){
         console.log(res);
+        var city = res.name;
+        var country = res.sys.country;
+        var description = res.weather[0].description;
+        var currentTemperature = res.main.temp;
+        var feelsLike = res.main.feels_like;
+        console.log(city, country, description, currentTemperature, feelsLike)
+
     })
+
+    
 }
 
 
