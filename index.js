@@ -34,11 +34,11 @@ form.onsubmit = function(e) {
         div.appendChild(description);
 
         var p = document.createElement('p');
-        p.textContent = 'Current Temperature: ' + res.main.temp + ' degrees Fahrenheit';
+        p.textContent = 'Current Temperature: ' + res.main.temp + '\xB0 F';
         div.appendChild(p);
 
         var p2 = document.createElement('p');
-        p2.textContent = 'Feels Like: ' + res.main.feels_like + ' degrees Fahrenheit';
+        p2.textContent = 'Feels Like: ' + res.main.feels_like + '\xB0 F';
         div.appendChild(p2);
 
     })
