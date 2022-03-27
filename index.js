@@ -3,6 +3,8 @@ var form = document.querySelector('form');
 var locationInput = document.querySelector('input[type=text]');
 var weatherLog = document.getElementById('weather');
 
+var iconUrl = 'http://openweathermap.org/img/wn/'
+
 var api = 'https://api.openweathermap.org/data/2.5/weather?'
 var apiKey = '&units=imperial&appid=e96f78fb54ab52579081833f456f29e6'
 
@@ -22,6 +24,10 @@ form.onsubmit = function(e) {
         h2.textContent = res.name + " , " + res.sys.country;
         div.appendChild(h2)
         weatherLog.appendChild(div)
+
+        var icon = document.createElement('img');
+        div.appendChild(icon);
+        icon.src= iconUrl + res.weather[0].icon + '@2x.png'
 
         var description = document.createElement('p');
         description.textContent = res.weather[0].description;
