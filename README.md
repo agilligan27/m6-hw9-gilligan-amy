@@ -77,3 +77,7 @@ Other JS DOM API resouces:
 - [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - [onclick](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick)
 - [Event.target](https://developer.mozilla.org/en-US/docs/Web/API/Event/target)
+
+
+Outside Sources Used:
+http://javascripter.net/faq/mathsymbols.htm#:~:text=Answer%3A%20You%20can%20include%20symbols%20in%20JavaScript%20strings,JavaScript%20strings%3B%20e.g.%20euro%20sign%20%28%E2%82%AC%29%20is%20u20AC
